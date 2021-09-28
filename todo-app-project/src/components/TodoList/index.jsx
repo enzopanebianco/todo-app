@@ -15,7 +15,6 @@ function TodoList() {
     function handleFilterTodo(active) {
         dispatch(filterByActive(active));
     }
-
     function handleGetAllTodos() {
         dispatch(getAllTodos())
     }
@@ -25,11 +24,13 @@ function TodoList() {
         <>
             <S.Container >
                 {state && state.map((st, index) => {
+                    // ESTE COMPONENTE É CADA TODO DA LISTA
                     return <Item 
                     data={st} index={index} key={st?.id} />
                 })}
+                
                 <S.Actions>
-                    <p>{state?.length} items left</p>
+                    <p>{state?.filter(todo=>todo.active===false).length} items left</p>
                     <div>
                         <p onClick={handleGetAllTodos}>All</p>
                         <p onClick={() => handleFilterTodo(false)} >Active</p>
@@ -37,6 +38,8 @@ function TodoList() {
                     </div>
                     <p onClick={handleClearList}>Clear Completed</p>
                 </S.Actions>
+
+                {/* DIV QUE SÓ RENDERIZA QUANDO A TELA ESTIVER PARA MOBILE */}
                 <S.ActionsResponsive>
 
                     <p onClick={handleGetAllTodos}>All</p>

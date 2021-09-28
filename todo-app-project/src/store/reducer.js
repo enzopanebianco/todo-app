@@ -41,7 +41,10 @@ export default function reducer(state = INITIAL_STATE, action) {
             const clearState = state.filter(todo=>todo.active===false);
             localStorage.setItem('todos',JSON.stringify([...clearState]));
             return clearState;
+        
         case actions.FILTER_BY_ACTIVE:
+            // FILTRA TODOS PELA VARIÁVEL ACTIVE PODENDO RETORNAR TANTO AQUELES
+            // QUE NÃO ESTÃO COMPLETOS COMO OS COMPLETOS
             state = JSON.parse(localStorage.getItem('todos'));
             return state.filter(todo => todo.active === action.active);
         case actions.GET_ALL_TODOS:

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import {  removeTodo, toggleTodo } from '../../store/actions';
-import * as S from '../TodoList/styles';
+import * as S from './styles';
 import checkImg from '../../assets/img/icon-check.svg'
 
 // import { Container } from './styles';

@@ -12,7 +12,7 @@ function App() {
     <Fragment>
       <Provider store={store}> {/*PROVIDER DO REDUX*/}
        <ThemeProvider theme={theme}> {/*PROVIDER DO STYLED COMPONENTS SETANDO O TEMA  */}
-        <MainApp setTheme={setTheme} theme={theme} /> {/*COMPONENENTE PRINCIPAL DA APLICAÇÃO*/}
+        <MainApp setTheme={setTheme} theme={theme} /> {/*COMPONENTE PRINCIPAL DA APLICAÇÃO*/}
       </ThemeProvider>
       </Provider>
     </Fragment>

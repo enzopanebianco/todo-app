@@ -7,6 +7,7 @@ import TodoList from '../TodoList';
 import * as S from './styles';
 
 function MainApp({ setTheme, theme }) {
+    // BOOLEANO QUE VERIFICA SE O INPUT ESTA ATIVO PARA MUDAR
     const [actived, setActived] = useState(false);
     const [text, setText] = useState('');
     const dispatch = useDispatch();
@@ -24,6 +25,7 @@ function MainApp({ setTheme, theme }) {
    
     return (
         <S.Container>
+            {/* IMG DE FUNDO, ESTA EM CIMA POIS ESTOU APLICANDO POSITION ABOLUTE NELA */}
             <S.ImgBackground />
             <S.Content>
                 <S.Header>

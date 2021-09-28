@@ -10,6 +10,7 @@ export const Container = styled.div`
     @media(max-width:375px){
         width: 375px;
         min-height: 100vh;
+        max-height: 500vh;
     }
 `;
 export const ImgBackground = styled.div`
